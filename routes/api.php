@@ -13,8 +13,8 @@ Route::prefix('/v1/auth')->group(function(){
     Route::post('/register',[AuthController::class, "funRegistro"]);
 
     Route::middleware('auth:sanctum')->group(function (){
-        Route::get('/v1/auth/perfil',[AuthController::class, "funPerfil"]);
-        Route::post('/v1/auth/logout',[AuthController::class, "funSalir"]);
+        Route::get('/perfil',[AuthController::class, "funPerfil"]);
+        Route::post('/logout',[AuthController::class, "funSalir"]);
     });
 });
 
